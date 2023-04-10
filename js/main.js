@@ -29,9 +29,9 @@ const sliderTotalEl = document.querySelector('#sliderTotal');
 function updateSliderFraction () {
     const sliderInfo = slider.getInfo();
 
-    currentSliderIndexEl.innerText = sliderInfo.index
+    currentSliderIndexEl.innerText = '0' + (sliderInfo.navCurrentIndex + 1);
 
-    sliderTotalEl.innerText = sliderInfo.pages
+    sliderTotalEl.innerText = '0' + sliderInfo.pages
 }
 
 // На старте
