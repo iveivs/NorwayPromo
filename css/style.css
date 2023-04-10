@@ -347,4 +347,7 @@ body {
     .logo__text {
         display: none;
     }
+    .nav__item {
+        display: none;
+    }
 }
