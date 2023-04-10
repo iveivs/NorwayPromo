@@ -7,3 +7,39 @@ const slider = tns({
     autoplayButtonOutput: false,
     // mouseDrag: true,
 });
+
+const sliderPrev = document.querySelector('#sliderPrev');
+const sliderNext = document.querySelector('#sliderNext');
+
+sliderPrev.onclick = () => {
+    slider.goTo('prev');
+}; 
+
+sliderNext.onclick = () => {
+    slider.goTo('next');
+};
+
+// Инфа на старте
+
+
+//  Блоки фракций
+const currentSliderIndexEl = document.querySelector('#sliderCurrent');
+const sliderTotalEl = document.querySelector('#sliderTotal');
+
+function updateSliderFraction () {
+    const sliderInfo = slider.getInfo();
+
+    currentSliderIndexEl.innerText = sliderInfo.index
+
+    sliderTotalEl.innerText = sliderInfo.pages
+}
+
+// На старте
+updateSliderFraction();
+
+// Инфа при перемещении
+
+slider.events.on('indexChanged', () => {
+    updateSliderFraction();
+});
+

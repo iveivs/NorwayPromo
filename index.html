@@ -20,7 +20,7 @@
             <img class="header-slider__item" src="./img/fonNorg1.jpg" alt="">
             <img class="header-slider__item" src="./img/fonNorg2.jpg" alt="">
             <img class="header-slider__item" src="./img/fonNorg3.jpg" alt="">
-            <img class="header-slider__item" src="./img/fonNorg4.jpg" alt="">
+            <!-- <img class="header-slider__item" src="./img/fonNorg4.jpg" alt=""> -->
         </div>
 
         <!-- Управление слайдером -->
@@ -29,16 +29,17 @@
         </div>
         <div class="header-slider-controls">
             <div class="header-slider-controls__arrows">
-                <button>
+                <button id="sliderPrev">
                     <img src="./img/icons/arrR.svg" alt="">
                 </button>
-                <button>
+                <button id="sliderNext">
                     <img src="./img/icons/arL.svg" alt="">
                 </button>
             </div>
             <div class="header-slider-controls__count">
-                <span class="header-slider-controls__count-current">01</span>
-                <span class="header-slider-controls__count-total">/04</span>
+                <span class="header-slider-controls__count-current" id="sliderCurrent">0</span>
+                / 
+                <span id="sliderTotal">0</span>
             </div>
         </div>
 
